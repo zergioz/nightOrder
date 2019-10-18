@@ -3,9 +3,11 @@
 
     <head>
 
-        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>SOCEUR/J33/NightOrders</title>
 
         <!-- CSS -->
@@ -173,8 +175,8 @@
                             <fieldset>
                                 <h4>MISSION:</h4>
                                 <div class="form-group md-form form-lg">
-                                    <label for="Mission">Provide Mission Details</label>
-                                    <textarea name="Mission" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="Mission"></textarea>
+                                    <label for="missionField">Provide Mission Details</label>
+                                    <textarea name="missionField" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="missionField"></textarea>
                                 </div>
                                 <div class="f1-buttons">
                                     <button type="button" class="btn btn-previous">Previous</button>
@@ -215,24 +217,24 @@
                                         <div id="conop-menu2" class="tab-pane fade">
                                             
                                             <div class="form-group md-form form-lg">
-                                                <label for="Objectives">Whats are the Objectives?</label> 
-                                                <textarea name="Objectives" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="Objectives"></textarea>
+                                                <label for="conopObjective">Whats are the Objectives?</label> 
+                                                <textarea name="conopObjective" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="conopObjective"></textarea>
                                             </div>    
                                             
                                         </div>
                                         <div id="conop-menu3" class="tab-pane fade">
                                             
                                             <div class="form-group md-form form-lg">
-                                                <label for="Effects">What are The Effects?</label>
-                                                <textarea name="Effects" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="Effects"></textarea>
+                                                <label for="conopEffect">What are The Effects?</label>
+                                                <textarea name="conopEffect" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="conopEffect"></textarea>
                                             </div>
                                             
                                         </div>
                                         <div id="conop-menu4" class="tab-pane fade">
                                             
                                             <div class="form-group md-form form-lg">
-                                                <label for="General">General (Phasing)</label>
-                                                <textarea name="General" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="General"></textarea>
+                                                <label for="conopGeneral">conopGeneral (Phasing)</label>
+                                                <textarea name="conopGeneral" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="conopGeneral"></textarea>
                                             </div>
                                             
                                         </div>
@@ -298,6 +300,8 @@
                                             <div class="form-check form-check-inline">
                                                 <div class="form-group md-form form-lg">
                                                     <input type="checkbox" class="form-check-input" id="JALL-check" value="JALL-check">Show All
+                                                    <input type="checkbox" class="form-check-input" id="HQ-check" value="HQ-CG">HQ
+                                                    <input type="checkbox" class="form-check-input" id="CG-check" value="CG-CG">CG
                                                     <input type="checkbox" class="form-check-input" id="J1-check" value="J1-check">J1
                                                     <input type="checkbox" class="form-check-input" id="J2-check" value="J2-check">J2
                                                     <input type="checkbox" class="form-check-input" id="J3-check" value="J3-check">J3
@@ -404,16 +408,16 @@
                             <fieldset>
                                 <h4>ADMIN AND LOGISTICS:</h4>
                                  <div class="form-group md-form form-lg">
-                                    <label for="conceptSustainment">Concept of Sustainment</label>
-                                    <textarea name="conceptSustainment" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="conceptSustainment"></textarea>
+                                    <label for="AdminLogConceptSustainment">Concept of Sustainment</label>
+                                    <textarea name="AdminLogConceptSustainment" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="AdminLogConceptSustainment"></textarea>
                                 </div>
                                 <div class="form-group md-form form-lg">
-                                    <label for="adminLogistic">Logistics</label>
-                                    <textarea name="adminLogistic" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="adminLogistic"></textarea>
+                                    <label for="adminLogLogistic">Logistics</label>
+                                    <textarea name="adminLogLogistic" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="adminLogLogistic"></textarea>
                                 </div>
                                 <div class="form-group md-form form-lg">
-                                    <label for="personnel">Personnel</label>
-                                    <textarea name="personnel" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="personnel"></textarea>
+                                    <label for="adminLogpersonnel">Personnel</label>
+                                    <textarea name="adminLogpersonnel" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="adminLogpersonnel"></textarea>
                                 </div>
                                 <div class="f1-buttons">
                                     <button type="button" class="btn btn-previous">Previous</button>
@@ -424,21 +428,17 @@
                              <fieldset>
                                 <h4>COMMAND & CONTROL:</h4>
                                  <div class="form-group md-form form-lg">
-                                    <label for="conceptSustainment">Concept of Sustainment</label>
-                                    <textarea name="conceptSustainment" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="conceptSustainment"></textarea>
+                                    <label for="commandControl">Command</label>
+                                    <textarea name="commandControl" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="commandControl"></textarea>
                                 </div>
                                 <div class="form-group md-form form-lg">
-                                    <label for="adminLogistic">Logistics</label>
-                                    <textarea name="adminLogistic" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="adminLogistic"></textarea>
-                                </div>
-                                <div class="form-group md-form form-lg">
-                                    <label for="personnel">Personnel</label>
-                                    <textarea name="personnel" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="personnel"></textarea>
+                                    <label for="commandCommunications">Joint Communication Systems Control</label>
+                                    <textarea name="commandCommunications" aria-label="With textarea" class="form-control form-control-lg md-textarea" id="commandCommunications"></textarea>
                                 </div>
                                 <div class="f1-buttons">
                                     <button type="button" class="btn btn-previous">Previous</button>
-                                    <button type="button" class="btn btn-submit">SAVE</button>
-                                    <button type="submit" class="btn btn-submit">RELEASE</button>
+                                    <button type="button" class="btn btn-submit" id="save">SAVE</button>
+                                    <button type="button" class="btn btn-submit" id="release">RELEASE</button>
                                 </div>
                             </fieldset>
                     	
@@ -489,18 +489,13 @@
             }); 
 
             // Toggle input areas
-            $('input').change(function(){
-                if (this.id !== ''){ 
-                    var doc = [elementArray[this.id][0]];
-                    var id = this.id;
+            $("[id$=check]").change(function(){
+                    var id  = this.id;
+                    var  doc = [elementArray[this.id][0]]
                     this.checked ? $(doc[0]).slideDown('slow') : $(doc[0]).slideUp('slow');
-                }
             });
             // Enable Show All options
-            $('#ALL-check').change(function(){
-                    this.checked ? showAllOrganization(): hideAllOrganizations();
-            });
-            $('#JALL-check').change(function(){
+            $('#ALL-check, #JALL-check').change(function(){
                     this.checked ? showAllOrganization(): hideAllOrganizations();
             });
             // Hide All
