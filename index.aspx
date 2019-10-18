@@ -1,13 +1,13 @@
 <!DOCTYPE html>
+<%@ Page Language="C#" %>
+<%@ Register tagprefix="SharePoint" namespace="Microsoft.SharePoint.WebControls" assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <html lang="en">
 
     <head>
-
+        <SharePoint:CssRegistration Name="default" runat="server"/>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>SOCEUR/J33/NightOrders</title>
 
         <!-- CSS -->
@@ -22,6 +22,8 @@
 
         <!-- JQuery -->
         <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.SPServices.js"></script>
+        
         <!-- Bootstrap tooltips -->
         <script type="text/javascript" src="assets/js/popper.min.js"></script>
         <!-- MDB core JavaScript -->
@@ -30,7 +32,8 @@
     </head>
 
     <body>
-
+    <form id="form1"  runat="server">       
+    <SharePoint:FormDigest  ID="FormDigest1" runat="server"></SharePoint:FormDigest>
 		<!-- Top menu -->
 		<nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
 			<div class="container">
@@ -60,7 +63,7 @@
 				</div>
 			</div>
 		</nav>
-
+</form>
         <!-- Top content -->
         <div class="top-content">
             <div class="container">
@@ -474,110 +477,7 @@
         <script src="assets/js/jquery.backstretch.min.js"></script>
         <script src="assets/js/retina-1.1.0.min.js"></script>
         <script src="assets/js/scripts.js"></script>
-        <script type="text/javascript">
-            
-            $('#initiateOrder').click(function(){
-                console.log('initiateOrder');
-                orderInit();    
-            });
-
-
-            function orderInit(){
-                
-
-                $.ajax({
-                    url: "../_api/web/lists/getbytitle('nightOrderData')/",
-                    method: "POST",
-                    contentType: "application/json;odata=verbose",
-                    data:JSON.stringify({'__metadata' : { 'type': 'item' }, 'Title': 'Announcement' }),
-                    headers:{
-                        "X-RequestDigest": document.getElementById("__REQUESTDIGEST").value,
-                        "X-HTTP-Method":"PUT",
-                        "Accept":"application/json;odata=verbose"
-                    },
-                    success: function(){
-                       console.log('success');
-                    },
-                    error: function(){
-                         console.log('error');
-                    }
-                });
-            }
-
-            function onSuccess(data) {
-                alert(data+ ' List Item Created');
-            }
-
-            function onError (error) {
-                alert(JSON.stringify(error));
-            }
-
-            // Array to hold all ID elements
-            var elementArray = 
-                {
-                    "ALL-check" : [""],
-                    "JALL-check" : [""],
-                    "SFG10-check" : ["#SFG10-paragraph"],
-                    "NSWU2-check" : ['#NSWU2-paragraph'],
-                    "SOW352-check" : ['#SOW352-paragraph'],
-                    "JSOACE-check" : ['#JSOACE-paragraph'],
-                    "TASKFORCE10-check": ['#TASKFORCE10-paragraph'],
-                    "CG-check" : ['#CG-paragraph'], 
-                    "HQ-check":['#HQ-paragraph'], 
-                    "J1-check":['#J1-paragraph'], 
-                    "J2-check":['#J2-paragraph'], 
-                    "J3-check":['#J3-paragraph'], 
-                    "J4-check":['#J4-paragraph'], 
-                    "J5-check":['#J5-paragraph'], 
-                    "J6-check":['#J6-paragraph'], 
-                    "J8-check":['#J8-paragraph'], 
-                    "JX-check":['#JX-paragraph'], 
-                    "SPECIALSTAFF-check":['#SPECIALSTAFF-paragraph'], 
-                    "SSD-check":['#SSD-paragraph'], 
-                    "AFSEA-check":['#AFSEA-paragraph']
-                };
-
-            // Hide input texts
-            $.each(elementArray, function (index, value) {
-                $(value[0]).hide();
-            }); 
-
-            // Toggle input areas
-            $("[id$=check]").change(function(){
-                    var id  = this.id;
-                    var  doc = [elementArray[this.id][0]]
-                    this.checked ? $(doc[0]).slideDown('slow') : $(doc[0]).slideUp('slow');
-            });
-            // Enable Show All options
-            $('#ALL-check, #JALL-check').change(function(){
-                    this.checked ? showAllOrganization(): hideAllOrganizations();
-            });
-            // Hide All
-            function hideAllOrganizations(){
-                $.each(elementArray, function (index, value) {
-                    $(value[0]).slideUp('slow');
-                    $("#"+index).removeAttr('checked');
-                }); 
-            }
-            // Show All
-            function showAllOrganization(){
-                $.each(elementArray, function (index, value) {
-                    $(value[0]).slideDown('slow');
-                    $("#"+index).prop('checked', 'checked');
-                });    
-            }
-            // Once everyting is loaded: fix bug to display label on top and remove text overlaping
-            $(document).ready(function() {
-                var inputList = $(document).find('input, textarea');
-                $.each(inputList, function (index, value) {
-                    $('#'+value.id).val() ? $('label[for='+value.id+']').addClass( "active" ): false;
-                });
-            });
-           </script>
-
-        <!--[if lt IE 10]>
-            <script src="assets/js/placeholder.js"></script>
-        <![endif]-->
+        
 
     </body>
 
