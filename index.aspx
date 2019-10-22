@@ -14,16 +14,17 @@
         <link rel="stylesheet" href="assets/css/fonts.css?family=Roboto:400,100,300,500">-->
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/form-elements.css">
         <link rel="stylesheet" href="assets/css/style.css">
  
         <!-- Material Design Bootstrap -->
         <link href="assets/css/mdb.min.css" rel="stylesheet">
 
+        <script src="fakeSharePointPage.js"></script>
         <!-- JQuery -->
         <script type="text/javascript" src="assets/js/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/jquery.SPServices.js"></script>
-        
+        <script type="text/javascript" src="assets/js/pnp.min.js"></script>
         <!-- Bootstrap tooltips -->
         <script type="text/javascript" src="assets/js/popper.min.js"></script>
         <!-- MDB core JavaScript -->
@@ -34,35 +35,35 @@
     <body>
     <form id="form1"  runat="server">       
     <SharePoint:FormDigest  ID="FormDigest1" runat="server"></SharePoint:FormDigest>
-		<!-- Top menu -->
-		<nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="index.html">SOCEUR/J33/NightOrders</a>
-				</div>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="top-navbar-1">
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<span class="li-text">
-								Sergio F. Rodriguez
-							</span> 
-						</li>
+        <!-- Top menu -->
+        <nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">SOCEUR/J33/NightOrders</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="top-navbar-1">
+                    <ul class="nav navbar-nav navbar-right">
                         <li>
                             <span class="li-text">
                                 Sergio F. Rodriguez
                             </span> 
                         </li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+                        <li>
+                            <span class="li-text">
+                                Sergio F. Rodriguez
+                            </span> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 </form>
         <!-- Top content -->
         <div class="top-content">
@@ -76,40 +77,40 @@
                 
                 <div class="row">
                     <div class="col-sm-12 form-box">
-                    	<form role="form" action="" method="post" class="f1">
+                        <form role="form" action="" method="post" class="f1">
                             
-                    		<h3>Start Order</h3>
-                    		<p>Fill every step to finalize a Night Order</p>
-                    		<div class="f1-steps">
-                    			<div class="f1-progress">
-                    			    <div class="f1-progress-line" data-now-value="14.66" data-number-of-steps="7" style="width: 14.66%;"></div>
-                    			</div>
+                            <h3>Start Order</h3>
+                            <p>Fill every step to finalize a Night Order</p>
+                            <div class="f1-steps">
+                                <div class="f1-progress">
+                                    <div class="f1-progress-line" data-now-value="14.66" data-number-of-steps="7" style="width: 14.66%;"></div>
+                                </div>
 
                                 <div class="f1-step active">
                                     <div class="f1-step-icon">
-                                        <i class="fa fa-user"></i>
+                                        <i class="fa fa-flag-checkered"></i>
                                     </div>
                                     <p>Initiate Order</p>
                                 </div>
 
-                    			<div class="f1-step">
-                    				<div class="f1-step-icon">
+                                <div class="f1-step">
+                                    <div class="f1-step-icon">
                                         <i class="fa fa-user"></i>
                                     </div>
-                    				<p>General</p>
-                    			</div>
-                    			<div class="f1-step">
-                    				<div class="f1-step-icon">
+                                    <p>General</p>
+                                </div>
+                                <div class="f1-step">
+                                    <div class="f1-step-icon">
                                         <i class="fa fa-key"></i>
                                     </div>
-                    				<p>Situation</p>
-                    			</div>
-                    		    <div class="f1-step">
-                    				<div class="f1-step-icon">
+                                    <p>Situation</p>
+                                </div>
+                                <div class="f1-step">
+                                    <div class="f1-step-icon">
                                         <i class="fa fa-book"></i>
                                     </div>
-                    				<p>Mission</p>
-                    			</div>
+                                    <p>Mission</p>
+                                </div>
                                 <div class="f1-step">
                                     <div class="f1-step-icon">
                                         <i class="fa fa-wrench"></i>
@@ -128,7 +129,13 @@
                                     </div>
                                     <p>C2</p>
                                 </div>
-                    		</div>
+                                <div class="f1-step">
+                                    <div class="f1-step-icon">
+                                        <i class="fa fa-paper-plane"></i>
+                                    </div>
+                                    <p>Release</p>
+                                </div>
+                            </div>
 
                             <fieldset>
                                 <div class="form-group md-form form-lg">
@@ -136,12 +143,12 @@
                                     <button type="button" class="btn-block btn-next" id="initiateOrder">Click [HERE] to Start</button>
                                 </div>
                             </fieldset>
-                    		
-                    		<fieldset>
-                    		    <h4>INITIAL INFORMATION:</h4>
-                    			<div class="form-group md-form form-lg">
+                            
+                            <fieldset>
+                                <h4>INITIAL INFORMATION:</h4>
+                                <div class="form-group md-form form-lg">
                                     <label for="copyNumber">Copy Number</label>
-                    	            <input type="text" name="copyNumber" class="form-control form-control-lg"  id="copyNumber">
+                                    <input type="text" name="copyNumber" class="form-control form-control-lg"  id="copyNumber">
                                </div>
                                <div class="form-group md-form form-lg">
                                     <label for="issuingHeadquarter">Issuing Headquarters</label>
@@ -165,7 +172,7 @@
                                 </div>
                                 <div class="f1-buttons">
                                     <button type="button" class="btn btn-previous">Previous</button>
-                                    <button type="button" class="btn btn-next">Next</button>
+                                    <button type="button" class="btn btn-next" id="generalOrder">Next</button>
                                 </div>
                             </fieldset>
 
@@ -189,7 +196,7 @@
                                 </div>
                                 <div class="f1-buttons">
                                     <button type="button" class="btn btn-previous">Previous</button>
-                                    <button type="button" class="btn btn-next">Next</button>
+                                    <button type="button" class="btn btn-next" id="situationOrder">Next</button>
                                 </div> 
                             </fieldset>
 
@@ -201,7 +208,7 @@
                                 </div>
                                 <div class="f1-buttons">
                                     <button type="button" class="btn btn-previous">Previous</button>
-                                    <button type="button" class="btn btn-next">Next</button>
+                                    <button type="button" class="btn btn-next" id="missionOrder">Next</button>
                                 </div>
                             </fieldset>
 
@@ -420,7 +427,7 @@
                                 </div>
                                 <div class="f1-buttons">
                                     <button type="button" class="btn btn-previous">Previous</button>
-                                    <button type="button" class="btn btn-next">Next</button>
+                                    <button type="button" class="btn btn-next" id="executionOrder">Next</button>
                                 </div>
                                 <!-- END: Coordinating Instructions --> 
 
@@ -442,7 +449,7 @@
                                 </div>
                                 <div class="f1-buttons">
                                     <button type="button" class="btn btn-previous">Previous</button>
-                                    <button type="button" class="btn btn-next">Next</button>
+                                    <button type="button" class="btn btn-next" id="adminLogOrder">Next</button>
                                 </div>
                             </fieldset>
 
@@ -458,12 +465,18 @@
                                 </div>
                                 <div class="f1-buttons">
                                     <button type="button" class="btn btn-previous">Previous</button>
-                                    <button type="button" class="btn btn-submit" id="save">SAVE</button>
-                                    <button type="button" class="btn btn-submit" id="release">RELEASE</button>
+                                    <button type="button" class="btn btn-next" id="commandControl">Next</button>
                                 </div>
                             </fieldset>
-                    	
-                    	</form>
+
+                            <fieldset>
+                                <div class="form-group md-form form-lg">
+                                    <h4>If the Order was completed. Click below to create the Order <i class="fa fa-file"></i> file to release.</h4>
+                                    <button type="button" class="btn btn-block btn-submit" id="release" value="1">Click [HERE] to Release</button>
+                                </div>
+                            </fieldset>
+                        
+                        </form>
                     </div>
                 </div>
                     
